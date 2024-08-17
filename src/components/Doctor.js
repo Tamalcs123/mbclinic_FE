@@ -6,13 +6,15 @@ const Doctor = ({ doctor }) => {
   return (
     <div
       className="card p-2 cursor-pointer"
-      style={{ backgroundColor: "#F5F7F8" }}
+      style={{
+        background: "linear-gradient(to bottom, #005555, #f0f0f0)",
+      }}
       onClick={() => navigate(`/book-appointment/${doctor._id}`)}
     >
-      <h1 className="card-title1">
+      <h1 className="card-title1" style={{ color: "white" }}>
         {doctor.firstName} {doctor.lastName}
       </h1>
-      <hr />
+      <hr style={{ marginTop: "2px", marginBottom: "5px", color: "white" }} />
       <p>
         <b>Mobile Number : </b>
         {doctor.phoneNumber}
@@ -34,3 +36,4 @@ const Doctor = ({ doctor }) => {
 };
 
 export default Doctor;
+

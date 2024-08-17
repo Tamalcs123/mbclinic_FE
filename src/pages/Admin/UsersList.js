@@ -63,7 +63,7 @@ const UsersList = () => {
   return (
     <Layout>
       <h1 className="page-title">Users List</h1>
-      <Table columns={columns} dataSource={users} />
+      <Table columns={columns} dataSource={users}  pagination={{ pageSize: 7 }}/>
     </Layout>
   );
 };

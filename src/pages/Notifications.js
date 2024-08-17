@@ -81,6 +81,7 @@ const Notifications = () => {
                     className="card p-2"
                     onClick={() => navigate(notifications?.onClickPath)}
                     key={index}
+                    style={{ marginBottom: "7px" }}
                   >
                     <div className="card-text">{notifications?.message}</div>
                   </div>
@@ -105,7 +106,7 @@ const Notifications = () => {
                 {user?.seenNotifications.map((notifications, index) => (
                   <div
                     className="card p-2"
-                    style={{ cursor: "pointer" }}
+                    style={{ cursor: "pointer", marginBottom: "7px" }}
                     key={index}
                   >
                     <div className="card-text">{notifications?.message}</div>

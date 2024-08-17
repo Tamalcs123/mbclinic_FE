@@ -20,6 +20,10 @@ const Login = () => {
       if (response.data.success) {
         toast.success(response.data.message);
         localStorage.setItem("token", response.data.data);
+        localStorage.setItem("isAdmin",response.data.myuser.isAdmin)
+        localStorage.setItem("isDoctor",response.data.myuser.isDoctor)
+        localStorage.setItem("USERID",response.data.myuser._id)
+        console.log("myUser",response.data)
         navigate("/");
       } else {
         toast.error(response.data.message);

@@ -59,8 +59,8 @@ const Appointments = () => {
       dataIndex: "createdAt",
       render: (text, record) => (
         <span className="normal-text">
-          {moment(record.date).format("DD-MM-YYYY")}  {moment(record.time).format("HH:mm")}
-         
+          {moment(record.date).format("DD-MM-YYYY")}{" "}
+          {moment(record.time).format("HH:mm")}
         </span>
       ),
     },
@@ -76,7 +76,11 @@ const Appointments = () => {
   return (
     <Layout>
       <h1 className="page-title">Appointments</h1>
-      <Table columns={columns} dataSource={appointments} />
+      <Table
+        columns={columns}
+        dataSource={appointments}
+        pagination={{ pageSize: 7 }}
+      />
     </Layout>
   );
 };

@@ -1,24 +1,35 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button, Col, Form, Input, Row, TimePicker } from "antd";
 import moment from "moment";
 
 const DoctorForm = ({ onFinish, doctorData }) => {
+  const [form] = Form.useForm();
+
+  useEffect(() => {
+    if (doctorData && doctorData.timings) {
+      form.setFieldsValue({
+        timings: [
+          moment(doctorData.timings[0], "HH:mm"),
+          moment(doctorData.timings[1], "HH:mm"),
+        ],
+      });
+    }
+  }, [doctorData, form]);
+
   return (
     <Form
+      form={form}
       layout="vertical"
       onFinish={onFinish}
       initialValues={{
         ...doctorData,
-        ...(doctorData && {
-          timings: doctorData.timings
-            ? [
-                moment(doctorData.timings[0], "HH:mm"),
-                moment(doctorData.timings[1], "HH:mm"),
-              ]
-            : [],
-        }),
+        timings: doctorData && doctorData.timings
+          ? [
+              moment(doctorData.timings[0], "HH:mm"),
+              moment(doctorData.timings[1], "HH:mm"),
+            ]
+          : [],
       }}
-      
     >
       <h1 className="card-title1 mt-3">Personal Information</h1>
       <Row gutter={20}>
@@ -101,11 +112,11 @@ const DoctorForm = ({ onFinish, doctorData }) => {
         <Col span={8} xs={24} sm={24} lg={8}>
           <Form.Item
             required
-            label="Fee Per Cunsultation"
+            label="Fee Per Consultation"
             name="feePerCunsultation"
             rules={[{ required: true }]}
           >
-            <Input placeholder="Fee Per Cunsultation" type="number" />
+            <Input placeholder="Fee Per Consultation" type="number" />
           </Form.Item>
         </Col>
         <Col span={8} xs={24} sm={24} lg={8}>
@@ -119,11 +130,19 @@ const DoctorForm = ({ onFinish, doctorData }) => {
           </Form.Item>
         </Col>
       </Row>
-      <div className="d-flex justify-content-end ">
-        <Button className="primary-button-applydoctor " htmlType="submit">
-          APPLY
-        </Button>
-      </div>
+      <Row>
+        <Col span={24}>
+          <div className="d-flex justify-content-end">
+            <Button
+              className="primary-button-applydoctor"
+              htmlType="submit"
+              style={{ marginTop: "-5px" }}
+            >
+              APPLY
+            </Button>
+          </div>
+        </Col>
+      </Row>
     </Form>
   );
 };

@@ -62,6 +62,11 @@ const Layout = ({ children }) => {
       path: "/admin/doctorslist",
       icon: "ri-user-heart-line",
     },
+    {
+      name: "Appointments",
+      path: "/admin/appointments",
+      icon: "ri-file-list-line",
+    },
   ];
 
   const menuToBeRendered = user?.isAdmin
@@ -69,7 +74,7 @@ const Layout = ({ children }) => {
     : user?.isDoctor
     ? doctorMenu
     : userMenu;
-  const role = user?.isAdmin ? "Admin" : user?.isDoctor ? "Doctor" : "User";
+  const role = user?.isAdmin ? "Admin" : user?.isDoctor ? "Doctor" : "Patient";
   return (
     <div className="main">
       <div className="d-flex layout">

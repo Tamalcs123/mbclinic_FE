@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 import { Table } from "antd";
 import moment from "moment";
 
-const DoctorAppointments = () => {
+const AdminAppointmentList = () => {
   const dispatch = useDispatch();
   const [appointments, setAppointments] = useState([]);
 
@@ -16,7 +16,7 @@ const DoctorAppointments = () => {
     try {
       dispatch(showLoading());
       const response = await axios.get(
-        environment.apiUrl + "/api/doctor/get-appointments-by-doctor-id",
+        environment.apiUrl + "/api/user/get-appointments-admin",
         {
           headers: {
             Authorization: "Bearer " + localStorage.getItem("token"),
@@ -33,42 +33,18 @@ const DoctorAppointments = () => {
     }
   };
 
-  const changeAppointmentStatus = async (record, status) => {
-    try {
-      dispatch(showLoading());
-      const response = await axios.post(
-        environment.apiUrl + "/api/doctor/change-appointment-status",
-        {
-          appointmentId: record._id,
-          status: status,
-        },
-        {
-          headers: {
-            Authorization: "Bearer " + localStorage.getItem("token"),
-          },
-        }
-      );
-      dispatch(hideLoading());
-      if (response.data.success) {
-        toast.success(response.data.message);
-        getAppointmentsData();
-      }
-    } catch (error) {
-      dispatch(hideLoading());
-      toast.error("Something went wrong ");
-    }
-  };
-
   const columns = [
     {
       title: "Id",
       dataIndex: "_id",
     },
     {
-      title: "Patient",
+      title: "Doctor Name",
       dataIndex: "name",
       render: (text, record) => (
-        <span className="normal-text">{record.userInfo?.name}</span>
+        <span className="normal-text">
+          {record.doctorInfo?.firstName} {record.doctorInfo?.lastName}
+        </span>
       ),
     },
     {
@@ -92,35 +68,6 @@ const DoctorAppointments = () => {
       title: "Status",
       dataIndex: "status",
     },
-    {
-      title: "Actions",
-      dataIndex: "actions",
-      render: (text, record) => (
-        <div className="d-flex">
-          {record.status === "pending" && (
-            <div className="d-flex">
-              <div style={{marginRight:"10px"}}>
-                <h1
-                  className="anchor"
-                  onClick={() => changeAppointmentStatus(record, "approved")}
-                >
-                  Approve
-                </h1>
-              </div>
-
-              <div>
-                <h1
-                  className="anchor"
-                  onClick={() => changeAppointmentStatus(record, "rejected")}
-                >
-                  Reject
-                </h1>
-              </div>
-            </div>
-          )}
-        </div>
-      ),
-    },
   ];
 
   useEffect(() => {
@@ -129,9 +76,13 @@ const DoctorAppointments = () => {
   return (
     <Layout>
       <h1 className="page-title">Appointments</h1>
-      <Table columns={columns} dataSource={appointments} pagination={{ pageSize: 7 }}/>
+      <Table
+        columns={columns}
+        dataSource={appointments}
+        pagination={{ pageSize: 7 }}
+      />
     </Layout>
   );
 };
 
-export default DoctorAppointments;
+export default AdminAppointmentList;

@@ -19,6 +19,13 @@ const Profile = () => {
   const [doctor, setDoctor] = useState(null);
   console.log("doctor data", doctor);
   const onFinish = async (values) => {
+    const formattedTimings = [
+      moment(values.timings[0]).format("HH:mm"),
+      moment(values.timings[1]).format("HH:mm"),
+    ];
+    console.log("formattedTimings",formattedTimings)
+
+    console.log("values",values)
     try {
       dispatch(showLoading());
       const response = await axios.post(
@@ -27,8 +34,8 @@ const Profile = () => {
           ...values,
           userId: user._id,
           timings: [
-            moment(values.timings[0]).format("HH:mm"),
-            moment(values.timings[1]).format("HH:mm"),
+            moment(values.timings[0]).format('HH:mm'),
+            moment(values.timings[1]).format('HH:mm'),
           ],
         },
         {
