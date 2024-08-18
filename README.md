@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+## `Admin Login Credentials`
+email: mbadmin@gmail.com\
+password:12345678
+#### `(It take sometime to login due to use free server to deploy the backend)`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### `Login page`
+![image](https://github.com/user-attachments/assets/2d191572-86b4-42d4-ad99-c526b6fbe71d)
 
-## Available Scripts
+### `Register Page`
+![image](https://github.com/user-attachments/assets/c66aaf9d-2324-49ac-ab49-0b3f4b46a3f1)
 
-In the project directory, you can run:
+### `Admin Dashboard`
+![image](https://github.com/user-attachments/assets/d9ba0a75-67f2-42fc-a6c3-8efa3463b122)
 
-### `npm start`
+### `Patients`
+![image](https://github.com/user-attachments/assets/c15811d5-eebc-4f6d-9208-f14af08041a6)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### `Doctors`
+![image](https://github.com/user-attachments/assets/ac180e9c-d5d7-43c1-9820-994e7513df18)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `Admin Notifications`
 
-### `npm test`
+![image](https://github.com/user-attachments/assets/ec924d38-9bae-4bfd-b4f4-c506a53ab73b)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### `Appointments`
+![image](https://github.com/user-attachments/assets/1ca5bf98-a930-4e7b-99b5-e86c82d94f04)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## `User Dashboard`
+![image](https://github.com/user-attachments/assets/fe3a4e3e-a7ec-4b0b-80e6-3367451d3c68)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `User Appointments`
+![image](https://github.com/user-attachments/assets/5aa3893c-1ac2-4cf8-9a19-10f54863f72f)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `Apply as a Doctor`
+![image](https://github.com/user-attachments/assets/c01608b5-0047-4e76-8ebe-23d83d38dd24)
 
-### `npm run eject`
+### `User Notifications`
+![image](https://github.com/user-attachments/assets/b490e992-00de-4332-a231-bb64fc4cf0e5)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## `Doctor Dashboard`
+![image](https://github.com/user-attachments/assets/98a7515a-c39c-4f36-8851-c7f89a86b0d2)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+###  `Doctor Appointments`
+![image](https://github.com/user-attachments/assets/2c2d4f15-4c24-43d6-bdd1-68440b696b4b)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### `Doctor Profile`
+![image](https://github.com/user-attachments/assets/6887ff7c-c638-4ca0-9c12-3f679851007e)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### `Doctor Notifications`
+![image](https://github.com/user-attachments/assets/5a80d35a-0d7f-4cb3-a8c9-9dd57595ae0a)
+![image](https://github.com/user-attachments/assets/382bb148-b59c-42ef-b133-cbd698c532d5)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+
