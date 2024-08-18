@@ -403,7 +403,8 @@ const Home = () => {
           </Row>
         ) : (
           <>
-            <div
+            <Col
+            span={24}
               style={{
                 maxHeight: "99vh",
                 overflowY: "scroll",
@@ -426,7 +427,7 @@ const Home = () => {
                   </Col>
                 ))}
               </Row>
-            </div>
+            </Col>
           </>
         )}
       </Row>
